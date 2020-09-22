@@ -1,55 +1,24 @@
-import React, { useState, useEffect } from "react";
- import './App.css';
- import Grid from './Grid'
+import React from 'react';
+import logo from './logo.svg';
+import './App.css';
+
 function App() {
-const [dt,setD] = useState({p:'',a:'',w:'',pwd:''})
-const [dd,setDD] = useState([])
-const [clean,setClean] = useState(true)
- 
-const c=(v) =>{
-  setClean(v)
-  setClean(true)
-} 
-
-const f =()=>{
-  fetch('https://script.google.com/macros/s/AKfycbxIDwUC4RfZFuUHyw3OJcNC3N2mCA3KP6T2gN0Ay9c_yqwwcUw/exec', {
-    method: 'GET',
-       }).then(res=> res.json()).
-    then(e=>{
-     setDD(e)  
-    })
-  .catch(e=>console.log("error")) 
-}
-  
-
-useEffect(() => {
- f()
-}, []);
-
- const  setA = (e,d)=>
- {
- 
-   if(d=='p'){
-     setD({...dt,p:e});
-   }else if(d==='a'){
-     setD({...dt,a:e})
-   }else if(d==='w'){
-    setD({...dt,w:e})
-   }else if(d==='pwd'){
-    setD({...dt,pwd:e})
-   }
- 
- } 
-
- const reset = ()=>{
-  setD({p:'',a:'',w:'',pwd:''})
- }
-  const d = ()=>  dt ;
- 
-const [data,setdata]= React.useState({name:"Alhaji"})
   return (
     <div className="App">
-      <Grid set = {setA} d={dt} dd={dd} f={f} c={c} r={reset}/>
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
     </div>
   );
 }
