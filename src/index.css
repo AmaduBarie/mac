@@ -91,9 +91,9 @@ div[class*="makeStyles-TextField"] {
     max-width: 70vw !important;
   }
 
-  button[class*='-button-']{
+  /* button[class*='-button-']{
     left: 8vw !important;
-  }
+  } */
   /* MuiTextField-root makeStyles-TextField-10 MuiFormControl-fullWidth */
 .MuiAutocomplete-root{
  

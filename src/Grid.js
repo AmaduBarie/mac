@@ -16,7 +16,8 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center',
     color: theme.palette.text.secondary,
     display:'flex',
-    alignItems:'center'
+    alignItems:'center',
+    justifyContent:'center'
   },
   head:{
       height:50,
@@ -43,12 +44,12 @@ const useStyles = makeStyles((theme) => ({
 },
   btn:{
       height:50,
-      marginLeft:-150,
+      
       backgroundColor:'green',
       "&:hover":{
           backgroundColor:'green'
       },
-      margin:5
+     minWidth:'200px' 
   }
 }));
 
@@ -131,7 +132,7 @@ const disps= (e)=>{
             Password:<Input set={set} d = {'pwd'} dta = {d.pwd}/>
         </Paper>
 
-         <Paper className={classes.papers}>
+         <Paper className={classes.paper}>
          <Button onClick={send} variant="contained" color="primary" className={classes.btn}>
             Send  {disp && <Img/>} 
         </Button>
